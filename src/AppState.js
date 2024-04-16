@@ -11,8 +11,8 @@ export const AppState = reactive({
 
   cheese: 10000,
 
+  multiplier: 0,
 
-  
   clickUpgrades: [
       new clickUpgrades ({
       name: 'pickaxe',

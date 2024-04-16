@@ -42,7 +42,13 @@ collectAutoUpgrades(){
   
   }
 
+clickMultiplierCount(){
+  AppState.clickUpgrades.forEach(clickUpgrade => { AppState.multiplier += clickUpgrade.multiplier * clickUpgrade.quantity })
+}
 
+autoMultiplierCount(){
+  AppState.autoUpgrades.forEach(autoUpgrades => { AppState.multiplier += autoUpgrades.multiplier * autoUpgrades.quantity })
+}
 
 }
 

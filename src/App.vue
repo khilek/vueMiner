@@ -11,6 +11,7 @@ const clickUpgrades = computed(() => AppState.clickUpgrades)
 
 const autoUpgrades = computed(() => AppState.autoUpgrades)
 
+const multiplier = computed(() => AppState.multiplier)
 
 function moonMine(){
   console.log('mining');
@@ -23,12 +24,15 @@ function buyClickUpgrades(upgradeName){
   console.log('Buying', upgradeName)
 
   gameService.buyClickUpgrades(upgradeName)
+  gameService.clickMultiplierCount()
 }
 
 function buyAutoUpgrades(upgradesName){
   console.log('Buying', upgradesName)
   gameService.buyAutoUpgrades(upgradesName)
+  gameService.autoMultiplierCount()
 }
+
 
 onMounted(()=>{
   setInterval(gameService.collectAutoUpgrades, 3000)
@@ -49,7 +53,7 @@ onMounted(()=>{
 
 <div class="container">
   <div class="row d-flex justify-content-center ">
-      <div class="col-4 border border-danger  card bg-warning" id="multiplier">Multiplier</div>
+      <div class="col-4 border border-danger  card bg-warning" id="multiplier">{{ multiplier }}</div>
       <div class="col-4 border border-danger rounded-top bg-warning " id="cheese"><span
           class="mdi mdi-cheese">{{ cheese }}</span>
       </div>
