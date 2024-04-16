@@ -53,7 +53,7 @@ onMounted(()=>{
 
 <div class="container">
   <div class="row d-flex justify-content-center ">
-      <div class="col-4 border border-danger  card bg-warning" id="multiplier">{{ multiplier }}</div>
+      <div class="col-4 border border-danger  card bg-warning">{{ multiplier }}</div>
       <div class="col-4 border border-danger rounded-top bg-warning " id="cheese"><span
           class="mdi mdi-cheese">{{ cheese }}</span>
       </div>
